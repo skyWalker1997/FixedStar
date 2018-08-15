@@ -9,7 +9,7 @@ def PrintSiteInfo():
     :return:None
     """
     # 使用minidom解析器打开XML文档
-    DOMTree = xml.dom.minidom.parse("../test_data.xml")
+    DOMTree = xml.dom.minidom.parse("../Site_Info.xml")
     Data = DOMTree.documentElement
     if Data.hasAttribute("data"):
         print "*********************************************"
