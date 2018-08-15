@@ -3,7 +3,7 @@ This is a tool about cyber space threat intelligence collection.Developed by CN_
 # Install
 pip -r install requirement.txt
 # Usage
-cd Monitor
+cd Monitor\
 python SourceStatusMonitor.py
 # Attention
 If you are in Chine，some website will timout, please use ss or VPN 
