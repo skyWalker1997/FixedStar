@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><SiteData data="SiteInfo">
     <Site name="Email-Format">
-        <Request_Type>Get</Request_Type>
+        <Request_Type>GET</Request_Type>
         <GetInfoType>Email</GetInfoType>
         <SiteIllustrate>Give a domain,get Emails about this doumain</SiteIllustrate>
         <SiteUrl>https://www.email-format.com/d/</SiteUrl>
@@ -14,7 +14,7 @@
         <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="Reversegenie">
-        <Request_Type>Get</Request_Type>
+        <Request_Type>GET</Request_Type>
         <GetInfoType>Personal</GetInfoType>
             <entry>Phone</entry>
             <entry>Address</entry>
@@ -70,18 +70,18 @@
         <SiteStatus>Available</SiteStatus>
         <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
-    <Site name="PorjectHoneyPot">
-        <Request_Type>GET</Request_Type>
-        <GetInfoType>Country</GetInfoType>
-        <SiteIllustrate>Give a IP ,get its source Country and its behavior</SiteIllustrate>
-        <SiteUrl>https://www.projecthoneypot.org/ip_</SiteUrl>
-        <Regex>
-            <![CDATA[.*?Geographic.*?Location.*?title="(.*?)"]]>
-        </Regex>
-        <ExampleInput type="IP">212.7.220.20</ExampleInput>
-        <ExampleOutput>Poland</ExampleOutput>
-        <TimeOut>80</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-8-14</LastCheckDate>
-    </Site>
+    <!--<Site name="PorjectHoneyPot">-->
+        <!--<Request_Type>GET</Request_Type>-->
+        <!--<GetInfoType>Country</GetInfoType>-->
+        <!--<SiteIllustrate>Give a IP ,get its source Country and its behavior</SiteIllustrate>-->
+        <!--<SiteUrl>https://www.projecthoneypot.org/ip_</SiteUrl>-->
+        <!--<Regex>-->
+            <!--<![CDATA[.*?Geographic.*?Location.*?title="(.*?)"]]>-->
+        <!--</Regex>-->
+        <!--<ExampleInput type="IP">212.7.220.20</ExampleInput>-->
+        <!--<ExampleOutput>Poland</ExampleOutput>-->
+        <!--<TimeOut>80</TimeOut>-->
+        <!--<SiteStatus>Available</SiteStatus>-->
+        <!--<LastCheckDate>2018-8-14</LastCheckDate>-->
+    <!--</Site>-->
 </SiteData>
