@@ -10,6 +10,7 @@ def Consult(site):
     if TimeOutFlag == 0:
         pattern = re.compile(u''+site.Regex,re.S)
         result = re.findall(pattern,content)
+        print result
         return result
     else:
         return ""

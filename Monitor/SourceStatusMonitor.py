@@ -9,7 +9,7 @@ from Monitor.Util import XML_Util, Spider_Util
 from Monitor.Util.OutputColor_Util import Logger
 
 
-
+"""Edit your local path"""
 __XML__PATH__ = "/Users/PINKFLOYD/Desktop/CodingStaff/PythonCoding/FixedStar/Monitor/test_data.xml"
 
 # 使用minidom解析器打开XML文档
