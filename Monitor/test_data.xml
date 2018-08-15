@@ -7,7 +7,7 @@
         <Regex>
             <![CDATA[email'.*?data-id=.*?fl'>(.*?)</div>]]>
         </Regex>
-        <ExampleInput>google.com</ExampleInput>
+        <ExampleInput type="Domain">google.com</ExampleInput>
         <ExampleOutput>@google.com</ExampleOutput>
         <SiteStatus>Available</SiteStatus>
         <LastCheckDate>2018-8-14</LastCheckDate>
@@ -24,7 +24,7 @@
         <Regex>
             <![CDATA[<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>]]>
         </Regex>
-        <ExampleInput>twomasplusone@aol.com</ExampleInput>
+        <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
         <ExampleOutput>64.12.97.10</ExampleOutput>
         <SiteStatus>Available</SiteStatus>
         <LastCheckDate>2018-8-14</LastCheckDate>
@@ -43,8 +43,26 @@
         <Regex>
             <![CDATA[<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">]]>
         </Regex>
-        <ExampleInput>twomasplusone@aol.com</ExampleInput>
+        <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
         <ExampleOutput>64.12.97.10</ExampleOutput>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
+    </Site>
+    <Site name="VXVault">
+        <Request_Type>POST</Request_Type>
+        <GetInfoType>Sample</GetInfoType>
+            <entry>Date</entry>
+            <entry>URL</entry>
+            <entry>MD5</entry>
+            <entry>IP</entry>
+            <entry>Tools</entry>
+        <SiteIllustrate>Give a MD5 ,get sample informatiion</SiteIllustrate>
+        <SiteUrl>http://vxvault.net/ViriList.php/</SiteUrl>
+        <Regex>
+            <![CDATA[<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\[D\]</a>.*?>(.*?)</a>.*?<a.*?php\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>]]>
+        </Regex>
+        <ExampleInput type="MD5">A65DBF2ED2E859D6F5806EAF0F7A5EBA</ExampleInput>
+        <ExampleOutput>192.185.147.123</ExampleOutput>
         <SiteStatus>Available</SiteStatus>
         <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>

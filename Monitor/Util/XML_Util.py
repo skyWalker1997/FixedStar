@@ -33,6 +33,7 @@ def GetSite(info,site):
     site.Regex = Regex.childNodes[1].data
 
     ExampleInPut = info.getElementsByTagName('ExampleInput')[0]
+    site.ExampleInPutType = ExampleInPut.hasAttribute("Type")
     site.ExampleInPut = ExampleInPut.childNodes[0].data
 
     ExampleOutPut = info.getElementsByTagName('ExampleOutput')[0]

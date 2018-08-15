@@ -9,6 +9,7 @@ class Site():
         self.GetInfoTpye = ""
         self.SiteIllustrate = ""
         self.SiteUrl = ""
+        self.ExampleInPutType = ""
         self.ExampleInPut = ""
         self.ExampleOutPut = ""
         self.SiteStatus = ""
@@ -24,6 +25,7 @@ class Site():
         print self.GetInfoTpye
         print self.SiteIllustrate
         print self.SiteUrl
+        print self.ExampleInPutType
         print self.ExampleInPut
         print self.ExampleOutPut
         print self.SiteStatus
