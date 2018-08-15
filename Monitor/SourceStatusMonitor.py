@@ -26,10 +26,10 @@ WebSites = Data.getElementsByTagName("Site")
 
 
 if __name__ == '__main__':
-    site = Site.Site()
+    init_site = Site.Site()
     SiteStatusList = []
     for tempsite in WebSites:
-        site = XML_Util.GetSite(tempsite, site)
+        site = XML_Util.GetSite(tempsite, init_site)
         ConsultResult = Spider_Util.Consult(site)
         # print ConsultResult
 

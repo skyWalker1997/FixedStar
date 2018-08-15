@@ -39,6 +39,9 @@ def GetSite(info,site):
     ExampleOutPut = info.getElementsByTagName('ExampleOutput')[0]
     site.ExampleOutPut = ExampleOutPut.childNodes[0].data
 
+    TimeOut = info.getElementsByTagName('TimeOut')[0]
+    site.TimeOut = TimeOut.childNodes[0].data
+
     SiteStatus = info.getElementsByTagName('SiteStatus')[0]
     site.SiteStatus = SiteStatus.childNodes[0].data
 

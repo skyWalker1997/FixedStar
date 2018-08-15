@@ -5,12 +5,13 @@ import urllib2
 from Monitor.Util.OutputColor_Util import Logger
 
 
-def get_request_infor(url):
+def get_request_infor(site):
     try:
         user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
         headers = {'User-Agent': user_agent}
-        request = urllib2.Request(url, headers=headers)
-        response = urllib2.urlopen(request, timeout=10)
+        request = urllib2.Request(site.SiteUrl, headers=headers)
+        timeout = int(str(site.TimeOut).encode('utf-8'))
+        response = urllib2.urlopen(request, timeout=timeout)
         content = response.read().decode('utf-8')
     except Exception as e:
         if str(e).find("timed out"):

@@ -12,6 +12,7 @@ class Site():
         self.ExampleInPutType = ""
         self.ExampleInPut = ""
         self.ExampleOutPut = ""
+        self.TimeOut = ""
         self.SiteStatus = ""
         self.LastCheckDate = ""
 
@@ -28,6 +29,7 @@ class Site():
         print self.ExampleInPutType
         print self.ExampleInPut
         print self.ExampleOutPut
+        print self.TimeOut
         print self.SiteStatus
         print self.LastCheckDate
 
