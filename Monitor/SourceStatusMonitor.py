@@ -3,10 +3,13 @@
 
 from xml.dom.minidom import parse
 import xml.dom.minidom
-from Monitor.Site import Site
-from Monitor.DevelopTemp import GetSite
-from Monitor.Util import XML_Util, Spider_Util
-from Monitor.Util.OutputColor_Util import Logger
+import Site
+
+
+from Util import XML_Util
+from Util import Spider_Util
+from Util.OutputColor_Util import Logger
+
 
 
 """Edit your local path"""
@@ -26,7 +29,7 @@ WebSites = Data.getElementsByTagName("Site")
 
 
 if __name__ == '__main__':
-    init_site = Site.Site()
+    init_site = Site
     SiteStatusList = []
     for tempsite in WebSites:
         site = XML_Util.GetSite(tempsite, init_site)
@@ -45,5 +48,5 @@ if __name__ == '__main__':
                 #XML_Util.setWebStatus(tempsite,"Unaulable")
                 SiteStatusList.append({"Site": site.SiteName, "Status": "Unavailable"})
                 print Logger.WARNING + "SiteStatus Changed!" + Logger.ENDC
-        print Logger.BEGINC+Logger.PINK + "********************" + Logger.ENDC
+        print Logger.BEGINC+Logger.PINK + "**************************" + Logger.ENDC
     XML_Util.setWebStatus(SiteStatusList,DOMTree,__XML__PATH__)

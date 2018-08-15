@@ -2,7 +2,8 @@ import requests
 import socket
 import urllib
 import urllib2
-from Monitor.Util.OutputColor_Util import Logger
+from OutputColor_Util import Logger
+
 
 
 def get_request_infor(site):

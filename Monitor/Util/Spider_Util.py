@@ -1,7 +1,7 @@
 import re
 
-from Monitor.Util import Request_Util
-from Monitor import Site
+import Request_Util
+
 
 
 def Consult(site):

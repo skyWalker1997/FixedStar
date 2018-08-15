@@ -1,8 +1,8 @@
 #coding:utf-8
-from py import xml
 
-from Monitor import Site
-from Monitor.Util.OutputColor_Util import Logger
+
+
+from OutputColor_Util import Logger
 
 
 def GetSite(info,site):
