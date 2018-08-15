@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><SiteData data="SiteInfo">
+    <Site name="Email-Format">
+        <Request_Type>Get</Request_Type>
+        <GetInfoType>Email</GetInfoType>
+        <SiteIllustrate>Give a domain,get Emails about this doumain</SiteIllustrate>
+        <SiteUrl>https://www.email-format.com/d/</SiteUrl>
+        <Regex>
+            <![CDATA[email'.*?data-id=.*?fl'>(.*?)</div>]]>
+        </Regex>
+        <ExampleInput>google.com</ExampleInput>
+        <ExampleOutput>@google.com</ExampleOutput>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
+    </Site>
+    <Site name="Reversegenie">
+        <Request_Type>Get</Request_Type>
+        <GetInfoType>Personal</GetInfoType>
+            <entry>Phone</entry>
+            <entry>Address</entry>
+            <entry>Gender</entry>
+            <entry>IP</entry>
+        <SiteIllustrate>Give a Email,get personal information about this Email</SiteIllustrate>
+        <SiteUrl>http://www.reversegenie.com/email_search/</SiteUrl>
+        <Regex>
+            <![CDATA[<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput>twomasplusone@aol.com</ExampleInput>
+        <ExampleOutput>64.12.97.10</ExampleOutput>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
+    </Site>
+    <Site name="ThatsThem">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>Personal</GetInfoType>
+            <entry>Name</entry>
+            <entry>Email</entry>
+            <entry>Address</entry>
+            <entry>Age</entry>
+            <entry>Phone</entry>
+            <entry>IP</entry>
+        <SiteIllustrate>Give a personal information,get personal information about the info you give</SiteIllustrate>
+        <SiteUrl>https://thatsthem.com/email/</SiteUrl>
+        <Regex>
+            <![CDATA[<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput>twomasplusone@aol.com</ExampleInput>
+        <ExampleOutput>64.12.97.10</ExampleOutput>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
+    </Site>
+</SiteData>
