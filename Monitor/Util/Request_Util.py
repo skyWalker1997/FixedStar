@@ -32,11 +32,11 @@ def post_request_info(site):
         test_data_urlencode = urllib.urlencode(test_data)
         session = requests.session()
         requ = session.post(site.SiteUrl, data=test_data_urlencode, headers=headers)
-        content = requ.text
+        content = requ.content
     except Exception as e:
         if str(e).find("timed out"):
             print Logger.FAIL + "TIME OUT" + Logger.ENDC
             return "",1
         else:
             print e
-    return requ.text,0
+    return content,0

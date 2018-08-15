@@ -13,7 +13,7 @@ from Util.OutputColor_Util import Logger
 
 
 """Edit your local path"""
-__XML__PATH__ = "/Users/PINKFLOYD/Desktop/CodingStaff/PythonCoding/FixedStar/Monitor/test_data.xml"
+__XML__PATH__ = "./test_data.xml"
 
 # 使用minidom解析器打开XML文档
 DOMTree = xml.dom.minidom.parse(__XML__PATH__)

@@ -5,7 +5,7 @@ import Request_Util
 
 
 def Consult(site):
-    if cmp(str(site.RequstType).encode('utf-8'),"GET") != -1:
+    if cmp(str(site.RequstType).encode('utf-8'),"GET") == 0:
         site.SiteUrl = str(site.SiteUrl).encode('utf-8') + str(site.ExampleInPut).encode('utf-8')
         content,TimeOutFlag = Request_Util.get_request_infor(site)
         if TimeOutFlag == 0:
