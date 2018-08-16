@@ -6,7 +6,7 @@ pip -r install requirement.txt
 cd Monitor\
 python SourceStatusMonitor.py
 # Attention
-If you are in Chine，some website will timout, please use ss or VPN 
+If you are in Chine，some website will timeout, please use ss or VPN 
 # OutPut
 I just chose some information of those website.Some output are not formal,because it just shows the situation of this intelligence source 
 # Sample
