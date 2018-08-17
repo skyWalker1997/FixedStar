@@ -17,7 +17,7 @@ IPVOID\
 MALWAREDOMAINLIST\
 ToolsVoid\
 URLVOID\
-IPSTACK\
+IPSTACK
 
 # Attention
 If you are in Chine，some website will timeout, please use ss or VPN 
