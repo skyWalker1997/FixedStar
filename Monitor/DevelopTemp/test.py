@@ -45,19 +45,36 @@ import socket
 # # else:
 # #     print content
 from py import xml
-content = ""
-url = "http://vxvault.net/ViriList.php"
-MD5 = "C56EC45DFCCA4A3A947D6B5B1ED7F22A"
+# content = ""
+# url = "http://vxvault.net/ViriList.php"
+# MD5 = "C56EC45DFCCA4A3A947D6B5B1ED7F22A"
+#
+# headers = {
+#
+#     "Content-Type": "application/x-www-form-urlencoded",
+# }
+#
+# test_data = {"MD5": MD5}
+# test_data_urlencode = urllib.urlencode(test_data)
+# session = requests.session()
+# requ = session.post(url, data=test_data_urlencode, headers=headers)
+# pattern = re.compile(u'<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\[D\]</a>.*?>(.*?)</a>.*?<a.*?php\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>', re.S)
+# result = re.findall(pattern, requ.content)
+# print result
+url = "http://www.ipvoid.com/ip-geolocation/"
+MD5 = "69.195.129.70"
 
 headers = {
 
     "Content-Type": "application/x-www-form-urlencoded",
 }
 
-test_data = {"MD5": MD5}
+test_data = {"ip": MD5}
 test_data_urlencode = urllib.urlencode(test_data)
 session = requests.session()
-requ = session.post(url, data=test_data_urlencode, headers=headers)
-pattern = re.compile(u'<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\[D\]</a>.*?>(.*?)</a>.*?<a.*?php\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>', re.S)
+requ = session.post(url, data=test_data_urlencode, headers=headers ,timeout = 15)
+print requ.content
+pattern = re.compile(u'IP.*?Address:(.*?)Hostname:(.*?).*?Organization:(.*?)ASN:(.*?)Continent:(.*?)Country:(.*?)Latitude.*?Longitude:(.*?)Region:(.*?)City:(.*?)<', re.S)
 result = re.findall(pattern, requ.content)
 print result
+

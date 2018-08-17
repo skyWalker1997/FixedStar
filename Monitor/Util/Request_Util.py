@@ -28,10 +28,10 @@ def post_request_info(site):
         "Content-Type": "application/x-www-form-urlencoded",
     }
     try:
-        test_data = {str(site.ExampleInPutType).encode('utf-8'):site.ExampleInPut}
+        test_data = {str(site.ExampleInPutType).encode('utf-8'):str(site.ExampleInPut).encode('utf-8')}
         test_data_urlencode = urllib.urlencode(test_data)
         session = requests.session()
-        requ = session.post(site.SiteUrl, data=test_data_urlencode, headers=headers)
+        requ = session.post(site.SiteUrl, data=test_data_urlencode, headers=headers, timeout=int(str(site.TimeOut).encode('utf-8')))
         content = requ.content
     except Exception as e:
         if str(e).find("timed out"):
