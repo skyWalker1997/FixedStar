@@ -8,23 +8,24 @@ import re
 #
 #
 #
-# content = ""
-# url = "https://www.projecthoneypot.org/ip_103.48.36.115"
-# user_agent = 'Chrome/31.0.1650.63'
-# headers = {'User-Agent': user_agent}
-# try:
-#     request = urllib2.Request(url, headers=headers)
-#     response = urllib2.urlopen(request, timeout=10)
-#     content = response.read().decode('utf-8')
-# except Exception as e:
-#     print e
-#
-# pattern = re.compile(u'.*?Geographic.*?Location.*?title="(.*?)"',re.S)
-#pattern = re.compile(u'<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>',re.S)
-# pattern = re.compile(u'<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">',re.S)
-# result = re.findall(pattern,content)
-#
-# print result
+content = ""
+url = "https://www.urlvoid.com/scan/baidu.com/"
+user_agent = 'Chrome/31.0.1650.63'
+headers = {'User-Agent': user_agent}
+try:
+    request = urllib2.Request(url, headers=headers)
+    response = urllib2.urlopen(request, timeout=10)
+    content = response.read().decode('utf-8')
+    print content
+except Exception as e:
+    print e
+# #
+pattern = re.compile(u'panel panel-(.*?)".*?Website Address.*?<strong>(.*?)</strong>.*?Analysis.*?<td>(.*?)&.*?Blacklist Status.*?label-danger.*?>(.*?)</span>.*?Domain Registration.*?<td>(.*?)</td>.*?IP Address.*?<strong>(.*?)</strong>.*?Reverse DNS.*?<td>(.*?)</td>.*?ASN.*?<a.*?>(.*?)</a>.*?Server Location.*?/>(.*?)</td>.*?Longitude.*?<td>(.*?)&.*?City.*?<td>(.*?)</td>.*?Region.*?<td>(.*?)</td>',re.S)
+# pattern = re.compile(u'tabletitle.*?<nobr>(.*?)</nobr>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>',re.S)
+# # pattern = re.compile(u'<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>',re.S)
+# # pattern = re.compile(u'<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">',re.S)
+result = re.findall(pattern,content)
+print result
 #
 import socket
 # import urllib2
@@ -61,20 +62,20 @@ from py import xml
 # pattern = re.compile(u'<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\[D\]</a>.*?>(.*?)</a>.*?<a.*?php\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>', re.S)
 # result = re.findall(pattern, requ.content)
 # print result
-url = "http://www.ipvoid.com/ip-geolocation/"
-MD5 = "69.195.129.70"
-
-headers = {
-
-    "Content-Type": "application/x-www-form-urlencoded",
-}
-
-test_data = {"ip": MD5}
-test_data_urlencode = urllib.urlencode(test_data)
-session = requests.session()
-requ = session.post(url, data=test_data_urlencode, headers=headers ,timeout = 15)
-print requ.content
-pattern = re.compile(u'IP.*?Address:(.*?)Hostname:(.*?).*?Organization:(.*?)ASN:(.*?)Continent:(.*?)Country:(.*?)Latitude.*?Longitude:(.*?)Region:(.*?)City:(.*?)<', re.S)
-result = re.findall(pattern, requ.content)
-print result
+# url = "http://www.toolsvoid.com/ip-address-lookup"
+# MD5 = "111.73.45.188"
+#
+# headers = {
+#
+#     "Content-Type": "application/x-www-form-urlencoded",
+# }
+#
+# test_data = {"ipaddr": MD5}
+# test_data_urlencode = urllib.urlencode(test_data)
+# session = requests.session()
+# requ = session.post(url, data=test_data_urlencode, headers=headers ,timeout = 15)
+# print requ.content
+# pattern = re.compile(u'<table.*?<strong>(.*?)</strong>.*?IP Hostname.*?<td>(.*?)</td>.*?Continent.*?<td>(.*?)</td>.*?Country Code.*?src=.*?>(.*?)</td>.*?Region.*?<td>(.*?)</td>.*?Lat.*?<td>(.*?)</td>.*?ASN.*?<td>(.*?)</td>.*?AS Owner.*?value="(.*?)".*?Internet Service Provider.*?value="(.*?)".*?ISP.*?value="(.*?)"', re.S)
+# result = re.findall(pattern, requ.content)
+# print result
 

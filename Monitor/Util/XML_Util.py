@@ -1,6 +1,5 @@
 #coding:utf-8
-
-
+import datetime
 
 from OutputColor_Util import Logger
 
@@ -60,10 +59,45 @@ def setWebStatus(SiteList,DOMTree,XMLPath):
                                 "SiteStatus") == 0):
                             # tag = DOMTree.childNodes[0].childNodes[j].childNodes[i].childNodes[0].nodeValue
                             DOMTree.childNodes[0].childNodes[j].childNodes[i].childNodes[0].nodeValue = site["Status"]
+
                             # print DOMTree.childNodes[0].childNodes[j].childNodes[i].childNodes[0].nodeValue
 
     with open(XMLPath, 'w') as fh:
         # 4.writexml()第一个参数是目标文件对象，第二个参数是根节点的缩进格式，第三个参数是其他子节点的缩进格式，
         #  第四个参数制定了换行格式，第五个参数制定了xml内容的编码。
         DOMTree.writexml(fh, indent='', addindent='', newl='', encoding='utf-8')
-        print Logger.OKGREEN+ '站点配置表更新!' + Logger.ENDC
+        #print Logger.OKGREEN+ '站点配置表更新!' + Logger.ENDC
+
+def setCheckDate(DOMTree,XMLPath):
+    for j in range(0, DOMTree.childNodes[0].childNodes.length):
+        if (cmp(str(DOMTree.childNodes[0].childNodes[j].nodeName), "Site") == 0):
+                for i in range(1, DOMTree.childNodes[0].childNodes[j].childNodes.length):
+                    if (cmp(str(DOMTree.childNodes[0].childNodes[j].childNodes[i].nodeName).encode('utf-8'),
+                            "LastCheckDate") == 0):
+                        DOMTree.childNodes[0].childNodes[j].childNodes[i].childNodes[0].nodeValue = datetime.datetime.now().strftime('%Y-%m-%d')
+
+                        # print DOMTree.childNodes[0].childNodes[j].childNodes[i]
+    with open(XMLPath, 'w') as fh:
+        # 4.writexml()第一个参数是目标文件对象，第二个参数是根节点的缩进格式，第三个参数是其他子节点的缩进格式，
+        #  第四个参数制定了换行格式，第五个参数制定了xml内容的编码。
+        DOMTree.writexml(fh, indent='', addindent='', newl='', encoding='utf-8')
+        print Logger.OKGREEN + '站点配置表更新!' + Logger.ENDC
+        print Logger.OKGREEN + 'Site_Info.xml Update!' + Logger.ENDC
+
+
+def initSiteStatus(DOMTree,XMLPath):
+    """To init the site status"""
+    for j in range(0, DOMTree.childNodes[0].childNodes.length):
+        if (cmp(str(DOMTree.childNodes[0].childNodes[j].nodeName), "Site") == 0):
+                for i in range(1, DOMTree.childNodes[0].childNodes[j].childNodes.length):
+                    if (cmp(str(DOMTree.childNodes[0].childNodes[j].childNodes[i].nodeName).encode('utf-8'),
+                            "SiteStatus") == 0):
+                        DOMTree.childNodes[0].childNodes[j].childNodes[i].childNodes[0].nodeValue = "Unavailable"
+                        DOMTree.childNodes[0].childNodes[j].childNodes[i + 2].childNodes[0].nodeValue = "2018-8-14"
+                        # print DOMTree.childNodes[0].childNodes[j].childNodes[i]
+    with open(XMLPath, 'w') as fh:
+        # 4.writexml()第一个参数是目标文件对象，第二个参数是根节点的缩进格式，第三个参数是其他子节点的缩进格式，
+        #  第四个参数制定了换行格式，第五个参数制定了xml内容的编码。
+        DOMTree.writexml(fh, indent='', addindent='', newl='', encoding='utf-8')
+        print Logger.WARNING + '站点状态均已设为不可用!日期设置为2018-8-14！' + Logger.ENDC
+        print Logger.WARNING + 'All site`s status are set to unavailable,lastcheckdate are set to 2018-8-14 ' + Logger.ENDC
