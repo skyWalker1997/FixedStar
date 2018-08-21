@@ -37,12 +37,12 @@ import socket
 content = ""
 from Monitor.Util.OutputColor_Util import Logger
 
-url = "https://ipinfo.io/221.130.179.36"
+url = "https://totalhash.cymru.com/analysis/?2be25b741214f07f2b111e88bcfac7cd5274f6e8"
 try:
     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
     headers = {'User-Agent': user_agent}
     request = urllib2.Request(url, headers=headers)
-    response = urllib2.urlopen(request, timeout=10)
+    response = urllib2.urlopen(request, timeout=70)
     content = response.read().decode('utf-8')
     #print content
 except Exception as e:
@@ -53,7 +53,7 @@ except Exception as e:
         print e
 else:
     print content
-    pattern = re.compile(u'Network.*?<a.*?>(.*?)</a>(.*?)</td>.*?countries.*?</a>(.*?)</td>.*?Latitude/Longitude.*?data.*?>(.*?)</td>.*?Route.*?<a.*?>(.*?)</a>',re.S)
+    pattern = re.compile(u'<th>AV</th>.*?<td>(.*?)</td>.*?<td>(.*?)</td>',re.S)
     result = re.findall(pattern, content)
     print result
 from py import xml

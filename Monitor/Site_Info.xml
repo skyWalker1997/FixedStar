@@ -196,4 +196,46 @@
         <SiteStatus>Available</SiteStatus>
         <LastCheckDate>2018-08-21</LastCheckDate>
     </Site>
+    <Site name="Fortiguard">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>DOMAIN</GetInfoType>
+        <SiteIllustrate>Give a domain ,judge if it is a malicious websites</SiteIllustrate>
+        <SiteUrl>https://www.fortiguard.com/webfilter?q=</SiteUrl>
+        <Regex>
+            <![CDATA[title">Category:(.*?)</h4>]]>
+        </Regex>
+        <ExampleInput type="domain">http://init.icloud-analysis.com/</ExampleInput>
+        <ExampleOutput>Malicious</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="SANS">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a ip,judge if it is a malicious websites</SiteIllustrate>
+        <SiteUrl>https://isc.sans.edu/ipinfo.html?ip=</SiteUrl>
+        <Regex>
+            <![CDATA[title">Category:(.*?)</h4>]]>
+        </Regex>
+        <ExampleInput type="ip">221.130.179.36</ExampleInput>
+        <ExampleOutput>CN</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="TotalHash">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>HASH</GetInfoType>
+        <SiteIllustrate>Give a hash,judge if it is a malware</SiteIllustrate>
+        <SiteUrl>https://totalhash.cymru.com/analysis/?</SiteUrl>
+        <Regex>
+            <![CDATA[<th>AV</th>.*?<td>(.*?)</td>.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput type="hash">2be25b741214f07f2b111e88bcfac7cd5274f6e8</ExampleInput>
+        <ExampleOutput>Mcafee</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
 </SiteData>
