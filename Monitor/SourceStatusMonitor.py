@@ -49,5 +49,5 @@ if __name__ == '__main__':
                 SiteStatusList.append({"Site": site.SiteName, "Status": "Unavailable"})
                 print Logger.WARNING + "SiteStatus Changed!" + Logger.ENDC
         print Logger.BEGINC+Logger.PINK + "**************************" + Logger.ENDC
-#    XML_Util.setWebStatus(SiteStatusList,DOMTree,__XML__PATH__)
+    XML_Util.setWebStatus(SiteStatusList,DOMTree,__XML__PATH__)
     XML_Util.setCheckDate(DOMTree,__XML__PATH__)

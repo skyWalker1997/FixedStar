@@ -8,43 +8,54 @@ import re
 #
 #
 #
+# content = ""
+# url = "http://www.cvedetails.com/cve/CVE-2017-8464/?q=CVE-2017-8464"
+# user_agent = 'Chrome/31.0.1650.63'
+# headers = {'User-Agent': user_agent}
+# try:
+#     request = urllib2.Request(url, headers=headers)
+#     response = urllib2.urlopen(request, timeout=15)
+#     content = response.read().decode('utf-8')
+#     print content
+# except Exception as e:
+#     print e
+# # #
+# pattern = re.compile(u'panel panel-(.*?)".*?Website Address.*?<strong>(.*?)</strong>.*?Analysis.*?<td>(.*?)&.*?Blacklist Status.*?label-danger.*?>(.*?)</span>.*?Domain Registration.*?<td>(.*?)</td>.*?IP Address.*?<strong>(.*?)</strong>.*?Reverse DNS.*?<td>(.*?)</td>.*?ASN.*?<a.*?>(.*?)</a>.*?Server Location.*?/>(.*?)</td>.*?Longitude.*?<td>(.*?)&.*?City.*?<td>(.*?)</td>.*?Region.*?<td>(.*?)</td>',re.S)
+# # pattern = re.compile(u'tabletitle.*?<nobr>(.*?)</nobr>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>',re.S)
+# # # pattern = re.compile(u'<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>',re.S)
+# # # pattern = re.compile(u'<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">',re.S)
+# result = re.findall(pattern,content)
+# print result
+#
+import socket
+
+
+# import urllib3.util.ssl_
+# print(urllib3.util.ssl_.DEFAULT_CIPHERS)
+# urllib3.util.ssl_.DEFAULT_CIPHERS = 'ALL'
+
 content = ""
-url = "https://www.urlvoid.com/scan/baidu.com/"
-user_agent = 'Chrome/31.0.1650.63'
-headers = {'User-Agent': user_agent}
+from Monitor.Util.OutputColor_Util import Logger
+
+url = "https://ipinfo.io/221.130.179.36"
 try:
+    user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+    headers = {'User-Agent': user_agent}
     request = urllib2.Request(url, headers=headers)
     response = urllib2.urlopen(request, timeout=10)
     content = response.read().decode('utf-8')
-    print content
+    #print content
 except Exception as e:
-    print e
-# #
-pattern = re.compile(u'panel panel-(.*?)".*?Website Address.*?<strong>(.*?)</strong>.*?Analysis.*?<td>(.*?)&.*?Blacklist Status.*?label-danger.*?>(.*?)</span>.*?Domain Registration.*?<td>(.*?)</td>.*?IP Address.*?<strong>(.*?)</strong>.*?Reverse DNS.*?<td>(.*?)</td>.*?ASN.*?<a.*?>(.*?)</a>.*?Server Location.*?/>(.*?)</td>.*?Longitude.*?<td>(.*?)&.*?City.*?<td>(.*?)</td>.*?Region.*?<td>(.*?)</td>',re.S)
-# pattern = re.compile(u'tabletitle.*?<nobr>(.*?)</nobr>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>',re.S)
-# # pattern = re.compile(u'<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>',re.S)
-# # pattern = re.compile(u'<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">',re.S)
-result = re.findall(pattern,content)
-print result
-#
-import socket
-# import urllib2
-# #
-# # content = ""
-# # from Monitor.Util.OutputColor_Util import Logger
-# #
-# # url = "https://www.email-format.com/d/bjtu.edu.cn"
-# # try:
-# #     user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-# #     headers = {'User-Agent': user_agent}
-# #     request = urllib2.Request(url, headers=headers)
-# #     response = urllib2.urlopen(request, timeout=10)
-# #     content = response.read().decode('utf-8')
-# # except Exception as e:
-# #     if str(e).find("timed out"):
-# #         print Logger.FAIL + "TIME OUT" + Logger.ENDC
-# # else:
-# #     print content
+    if str(e).find("timed out") == 1:
+        print e
+        print Logger.FAIL + "TIME OUT" + Logger.ENDC
+    else:
+        print e
+else:
+    print content
+    pattern = re.compile(u'Network.*?<a.*?>(.*?)</a>(.*?)</td>.*?countries.*?</a>(.*?)</td>.*?Latitude/Longitude.*?data.*?>(.*?)</td>.*?Route.*?<a.*?>(.*?)</a>',re.S)
+    result = re.findall(pattern, content)
+    print result
 from py import xml
 # content = ""
 # url = "http://vxvault.net/ViriList.php"
