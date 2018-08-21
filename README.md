@@ -6,7 +6,7 @@ pip -r install requirement.txt
 cd Monitor\
 python SourceStatusMonitor.py
 # Project Status
-Support 11 sites! Date:2018-8-17\
+Support 14 sites! Date:2018-8-21\
 Email-Format\
 Reversegenie\
 ThatsThem\
@@ -17,7 +17,10 @@ IPVOID\
 MALWAREDOMAINLIST\
 ToolsVoid\
 URLVOID\
-IPSTACK
+IPSTACK\
+CYMON\
+IPINFO\
+Fortiguard
 
 # Attention
 If you are in China，some website will timeout, please use ss or VPN 
