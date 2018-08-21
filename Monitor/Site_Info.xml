@@ -11,7 +11,7 @@
         <ExampleOutput>@google.com</ExampleOutput>
         <TimeOut>20</TimeOut>
         <SiteStatus>Unavailable</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="Reversegenie">
         <Request_Type>GET</Request_Type>
@@ -28,8 +28,8 @@
         <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
         <ExampleOutput>64.12.97.10</ExampleOutput>
         <TimeOut>20</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="ThatsThem">
         <Request_Type>GET</Request_Type>
@@ -48,8 +48,8 @@
         <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
         <ExampleOutput>64.12.97.10</ExampleOutput>
         <TimeOut>10</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="VXVault">
         <Request_Type>POST</Request_Type>
@@ -68,7 +68,7 @@
         <ExampleOutput>92.63.197.60</ExampleOutput>
         <TimeOut>10</TimeOut>
         <SiteStatus>Unavailable</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="PorjectHoneyPot">
         <Request_Type>GET</Request_Type>
@@ -81,8 +81,8 @@
         <ExampleInput type="IP">212.7.220.20</ExampleInput>
         <ExampleOutput>Poland</ExampleOutput>
         <TimeOut>80</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
      <Site name="HACKEDIP">
         <Request_Type>GET</Request_Type>
@@ -95,8 +95,8 @@
         <ExampleInput type="ip">69.195.129.70</ExampleInput>
         <ExampleOutput>69.195.129.70</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="IPVOID">
         <Request_Type>POST</Request_Type>
@@ -109,8 +109,8 @@
         <ExampleInput type="ip">69.195.129.70</ExampleInput>
         <ExampleOutput>Joe's Datacenter</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="MALWAREDOMAINLIST">
         <Request_Type>GET</Request_Type>
@@ -123,8 +123,8 @@
         <ExampleInput type="ip">104.27.163.228</ExampleInput>
         <ExampleOutput>textspeier.de</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="ToolsVoid">
         <Request_Type>POST</Request_Type>
@@ -137,8 +137,8 @@
         <ExampleInput type="ipaddr">111.73.45.188</ExampleInput>
         <ExampleOutput>China</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="URLVOID">
         <Request_Type>GET</Request_Type>
@@ -151,8 +151,8 @@
         <ExampleInput type="domain">baidu.com/</ExampleInput>
         <ExampleOutput>123.125.115.110</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="IPSTACK">
         <Request_Type>GET</Request_Type>
@@ -165,8 +165,8 @@
         <ExampleInput type="ip">221.130.179.36</ExampleInput>
         <ExampleOutput>Shanghai</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="CYMON">
         <Request_Type>GET</Request_Type>
@@ -179,8 +179,8 @@
         <ExampleInput type="ip">221.130.179.36</ExampleInput>
         <ExampleOutput>malwr.com</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="IPINFO">
         <Request_Type>GET</Request_Type>
@@ -193,8 +193,8 @@
         <ExampleInput type="ip">221.130.179.36</ExampleInput>
         <ExampleOutput>Shanghai</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="Fortiguard">
         <Request_Type>GET</Request_Type>
@@ -207,8 +207,8 @@
         <ExampleInput type="domain">http://init.icloud-analysis.com/</ExampleInput>
         <ExampleOutput>Malicious</ExampleOutput>
         <TimeOut>15</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="SANS">
         <Request_Type>GET</Request_Type>
@@ -222,7 +222,7 @@
         <ExampleOutput>CN</ExampleOutput>
         <TimeOut>10</TimeOut>
         <SiteStatus>Unavailable</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
     <Site name="TotalHash">
         <Request_Type>GET</Request_Type>
@@ -235,7 +235,7 @@
         <ExampleInput type="hash">2be25b741214f07f2b111e88bcfac7cd5274f6e8</ExampleInput>
         <ExampleOutput>Mcafee</ExampleOutput>
         <TimeOut>10</TimeOut>
-        <SiteStatus>Available</SiteStatus>
-        <LastCheckDate>2018-08-21</LastCheckDate>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-8-14</LastCheckDate>
     </Site>
 </SiteData>
