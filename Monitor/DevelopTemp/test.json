@@ -1,0 +1,32 @@
+{
+  "site":[
+    {
+      "siteinfo": {
+        "sitename": "BAIDU",
+        "requesttype": "GET",
+        "getinfotype": [
+          "ip",
+          "domain",
+          "url"
+        ],
+        "siteillustrate": "Give a domain,get Emails about this doumain",
+        "siteurl": "https://www.email-format.com/d/",
+        "regex": "email'.*?data-id=.*?fl'>(.*?)</div>"
+      }
+    },{
+    "siteinfo": {
+        "sitename": "GOOGLE",
+        "requesttype": "POST",
+        "getinfotype": [
+          "ip",
+          "domain",
+          "url"
+        ],
+        "siteillustrate": "Give a ip,get info about this ip",
+        "siteurl": "https://www.google.com/d/",
+        "regex": "email'.*?data-id=.*?fl'>(.*?)</div>"
+      }
+    }
+  ]
+}
+

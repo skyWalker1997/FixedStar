@@ -1,0 +1,77 @@
+{
+    "site": [
+        {
+            "sitename": "Email-Format", 
+            "requesttype": "GET", 
+            "getinfotype": "Email", 
+            "getinfoentry": [], 
+            "siteillustrate": "Give a domain,get Emails about this doumain", 
+            "siteurl": "https://www.email-format.com/d/", 
+            "regex": "email'.*?data-id=.*?fl'>(.*?)</div>", 
+            "exampleinputtype": "Domain", 
+            "exampleinput": "google.com", 
+            "exampleoutput": "@google.com", 
+            "timeout": "20", 
+            "sitestatus": "Unavailable", 
+            "lastcheckdate": "2018-08-22"
+        }, 
+        {
+            "sitename": "Reversegenie", 
+            "requesttype": "GET", 
+            "getinfotype": "Personal", 
+            "getinfoentry": [
+                "Phone", 
+                "Address", 
+                "Gender", 
+                "IP"
+            ], 
+            "siteillustrate": "Give a Email,get personal information about this Email", 
+            "siteurl": "http://www.reversegenie.com/email_search/", 
+            "regex": "<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>", 
+            "exampleinputtype": "Email", 
+            "exampleinput": "twomasplusone@aol.com", 
+            "exampleoutput": "64.12.97.10", 
+            "timeout": "20", 
+            "sitestatus": "Available", 
+            "lastcheckdate": "2018-08-22"
+        }, 
+        {
+            "sitename": "VXVault", 
+            "requesttype": "POST", 
+            "getinfotype": "Sample", 
+            "getinfoentry": [
+                "Date", 
+                "URL", 
+                "MD5", 
+                "IP", 
+                "Tools"
+            ], 
+            "siteillustrate": "Give a MD5 ,get sample informatiion", 
+            "siteurl": "http://vxvault.net/ViriList.php/", 
+            "regex": "<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\\[D\\]</a>.*?>(.*?)</a>.*?<a.*?php\\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>", 
+            "exampleinputtype": "MD5", 
+            "exampleinput": "C56EC45DFCCA4A3A947D6B5B1ED7F22A", 
+            "exampleoutput": "92.63.197.60", 
+            "timeout": "10", 
+            "sitestatus": "Available", 
+            "lastcheckdate": "2018-08-22"
+        }, 
+        {
+            "sitename": "IPSTACK", 
+            "requesttype": "API", 
+            "getinfotype": "IP", 
+            "getinfoentry": [
+                ""
+            ], 
+            "siteillustrate": "Give a ip ,get its information", 
+            "siteurl": "https://ipstack.com/ipstack_api.php?ip=", 
+            "regex": "{(.*?)}", 
+            "exampleinputtype": "ip", 
+            "exampleinput": "221.130.179.36", 
+            "exampleoutput": "Shanghai", 
+            "timeout": "15", 
+            "sitestatus": "Available", 
+            "lastcheckdate": "2018-08-22"
+        }
+    ]
+}
