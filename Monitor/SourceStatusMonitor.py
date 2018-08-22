@@ -7,7 +7,7 @@ from Util import Site_Util
 from Site import Site
 
 
-__JSON_PATH__ = "/Users/PINKFLOYD/Desktop/CodingStaff/PythonCoding/FixedStar_Json/Monitor/SiteInfo.json"
+__JSON_PATH__ = "/Users/PINKFLOYD/Desktop/CodingStaff/PythonCoding/FixedS/Monitor/SiteInfo.json"
 
 if __name__ == '__main__':
     print Logger.HEADER + "*********************************************" + Logger.ENDC
