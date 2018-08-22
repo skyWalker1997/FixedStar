@@ -6,13 +6,12 @@ pip -r install requirement.txt
 cd Monitor\
 python SourceStatusMonitor.py
 # Project Status
-If you wanna use Json version,now we support only 3 websites.(2018-08-22)
+If you wanna use Json version,now we support only 3 websites.(2018-08-22)\
 Reversegenie\
 VXVault\
-IPSTACK
+IPSTACK\
 If you wanna use XML version\
-(which now support the 14 sites in the following list.\But it will no longer update in future develop)
-Support 14 sites! Date:2018-8-21\
+(which now support the 14 sites in the following list.\But it will no longer update in future develop)Date:2018-8-21\
 Email-Format\
 Reversegenie\
 ThatsThem\
