@@ -1,5 +1,7 @@
 # FixedStar
 This is a tool about cyber space threat intelligence collection.Developed by CN_skywalker.
+# Warning
+This branch just support 14 sites and will no longer update in future develope.
 # Install
 pip -r install requirement.txt
 # Usage
