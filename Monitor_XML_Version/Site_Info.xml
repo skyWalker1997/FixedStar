@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?><SiteData data="SiteInfo">
+    <Site name="Email-Format">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>Email</GetInfoType>
+        <SiteIllustrate>Give a domain,get Emails about this doumain</SiteIllustrate>
+        <SiteUrl>https://www.email-format.com/d/</SiteUrl>
+        <Regex>
+            <![CDATA[email'.*?data-id=.*?fl'>(.*?)</div>]]>
+        </Regex>
+        <ExampleInput type="Domain">google.com</ExampleInput>
+        <ExampleOutput>@google.com</ExampleOutput>
+        <TimeOut>20</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="Reversegenie">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>Personal</GetInfoType>
+            <entry>Phone</entry>
+            <entry>Address</entry>
+            <entry>Gender</entry>
+            <entry>IP</entry>
+        <SiteIllustrate>Give a Email,get personal information about this Email</SiteIllustrate>
+        <SiteUrl>http://www.reversegenie.com/email_search/</SiteUrl>
+        <Regex>
+            <![CDATA[<th>Email-IP.*?ip_whois.*?>(.*?)</a>.*?<th>Streetname:.*?<td>(.*?)</td>.*?<th>Address:.*?<td>(.*?)</td>.*?<th>City:.*?<td>(.*?)</td>.*?State.*?<td>(.*?)</td>.*?Gender:.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
+        <ExampleOutput>64.12.97.10</ExampleOutput>
+        <TimeOut>20</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="ThatsThem">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>Personal</GetInfoType>
+            <entry>Name</entry>
+            <entry>Email</entry>
+            <entry>Address</entry>
+            <entry>Age</entry>
+            <entry>Phone</entry>
+            <entry>IP</entry>
+        <SiteIllustrate>Give a personal information,get personal information about the info you give</SiteIllustrate>
+        <SiteUrl>https://thatsthem.com/email/</SiteUrl>
+        <Regex>
+            <![CDATA[<a href="/name/(.*?)">.*?<a href.*?/address/(.*?)">.*?<span itemprop="telephone">(.*?)</span>.*?<span itemprop="email">(.*?)</span>.*?<a href="/ip/(.*?)">]]>
+        </Regex>
+        <ExampleInput type="Email">twomasplusone@aol.com</ExampleInput>
+        <ExampleOutput>64.12.97.10</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="VXVault">
+        <Request_Type>POST</Request_Type>
+        <GetInfoType>Sample</GetInfoType>
+            <entry>Date</entry>
+            <entry>URL</entry>
+            <entry>MD5</entry>
+            <entry>IP</entry>
+            <entry>Tools</entry>
+        <SiteIllustrate>Give a MD5 ,get sample informatiion</SiteIllustrate>
+        <SiteUrl>http://vxvault.net/ViriList.php/</SiteUrl>
+        <Regex>
+            <![CDATA[<TR>.*?ID=.*?>(.*?)</a>.*?<a.*?\[D\]</a>.*?>(.*?)</a>.*?<a.*?php\?MD5=.*?>(.*?)</a>.*?<a.*?IP=.*?>(.*?)</a>.*?<a.*?pedump.*?>(.*?)</a>.*?>(.*?)</a>]]>
+        </Regex>
+        <ExampleInput type="MD5">C56EC45DFCCA4A3A947D6B5B1ED7F22A</ExampleInput>
+        <ExampleOutput>92.63.197.60</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="PorjectHoneyPot">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>Country</GetInfoType>
+        <SiteIllustrate>Give a IP ,get its source Country and its behavior</SiteIllustrate>
+        <SiteUrl>https://www.projecthoneypot.org/ip_</SiteUrl>
+        <Regex>
+            <![CDATA[.*?Geographic.*?Location.*?title="(.*?)"]]>
+        </Regex>
+        <ExampleInput type="IP">212.7.220.20</ExampleInput>
+        <ExampleOutput>Poland</ExampleOutput>
+        <TimeOut>80</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+     <Site name="HACKEDIP">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a IP ,tell you if it is a bad ip</SiteIllustrate>
+        <SiteUrl>http://www.hackedip.com/api.php?ip=</SiteUrl>
+        <Regex>
+            <![CDATA["(.*?)",]]>
+        </Regex>
+        <ExampleInput type="ip">69.195.129.70</ExampleInput>
+        <ExampleOutput>69.195.129.70</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="IPVOID">
+        <Request_Type>POST</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a IP ,get its owner and location</SiteIllustrate>
+        <SiteUrl>http://www.ipvoid.com/ip-geolocation/</SiteUrl>
+        <Regex>
+            <![CDATA[IP.*?Address:(.*?)Hostname:(.*?).*?Organization:(.*?)ASN:(.*?)Continent:(.*?)Country:(.*?)Latitude.*?Longitude:(.*?)Region:(.*?)City:(.*?)<]]>
+        </Regex>
+        <ExampleInput type="ip">69.195.129.70</ExampleInput>
+        <ExampleOutput>Joe's Datacenter</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="MALWAREDOMAINLIST">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a IP ,get its owner and location</SiteIllustrate>
+        <SiteUrl>http://www.malwaredomainlist.com/mdl.php?search=</SiteUrl>
+        <Regex>
+            <![CDATA[tabletitle.*?<nobr>(.*?)</nobr>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput type="ip">104.27.163.228</ExampleInput>
+        <ExampleOutput>textspeier.de</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="ToolsVoid">
+        <Request_Type>POST</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a IP ,get its information</SiteIllustrate>
+        <SiteUrl>http://www.toolsvoid.com/ip-address-lookup</SiteUrl>
+        <Regex>
+            <![CDATA[<table.*?<strong>(.*?)</strong>.*?IP Hostname.*?<td>(.*?)</td>.*?Continent.*?<td>(.*?)</td>.*?Country Code.*?src=.*?>(.*?)</td>.*?Region.*?<td>(.*?)</td>.*?Lat.*?<td>(.*?)</td>.*?ASN.*?<td>(.*?)</td>.*?AS Owner.*?value="(.*?)".*?Internet Service Provider.*?value="(.*?)".*?ISP.*?value="(.*?)"]]>
+        </Regex>
+        <ExampleInput type="ipaddr">111.73.45.188</ExampleInput>
+        <ExampleOutput>China</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="URLVOID">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>DOMAIN</GetInfoType>
+        <SiteIllustrate>Give a domain ,get its information and if safe or not</SiteIllustrate>
+        <SiteUrl>https://www.urlvoid.com/scan/</SiteUrl>
+        <Regex>
+            <![CDATA[panel panel-(.*?)".*?Website Address.*?<strong>(.*?)</strong>.*?Analysis.*?<td>(.*?)&.*?Blacklist Status.*?label-danger.*?>(.*?)</span>.*?Domain Registration.*?<td>(.*?)</td>.*?IP Address.*?<strong>(.*?)</strong>.*?Reverse DNS.*?<td>(.*?)</td>.*?ASN.*?<a.*?>(.*?)</a>.*?Server Location.*?/>(.*?)</td>.*?Longitude.*?<td>(.*?)&.*?City.*?<td>(.*?)</td>.*?Region.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput type="domain">baidu.com/</ExampleInput>
+        <ExampleOutput>123.125.115.110</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="IPSTACK">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a ip ,get its information</SiteIllustrate>
+        <SiteUrl>https://ipstack.com/ipstack_api.php?ip=</SiteUrl>
+        <Regex>
+            <![CDATA[{(.*?)}]]>
+        </Regex>
+        <ExampleInput type="ip">221.130.179.36</ExampleInput>
+        <ExampleOutput>Shanghai</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="CYMON">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a ip ,get its associate URL,domain,events</SiteIllustrate>
+        <SiteUrl>https://cymon.io/api/nexus/v1/ip/</SiteUrl>
+        <Regex>
+            <![CDATA[{(.*?)}]]>
+        </Regex>
+        <ExampleInput type="ip">221.130.179.36</ExampleInput>
+        <ExampleOutput>malwr.com</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="IPINFO">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a ip ,get its info</SiteIllustrate>
+        <SiteUrl>https://ipinfo.io/</SiteUrl>
+        <Regex>
+            <![CDATA[Network.*?<a.*?>(.*?)</a>(.*?)</td>.*?countries.*?</a>(.*?)</td>.*?Latitude/Longitude.*?data.*?>(.*?)</td>.*?Route.*?<a.*?>(.*?)</a>]]>
+        </Regex>
+        <ExampleInput type="ip">221.130.179.36</ExampleInput>
+        <ExampleOutput>Shanghai</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="Fortiguard">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>DOMAIN</GetInfoType>
+        <SiteIllustrate>Give a domain ,judge if it is a malicious websites</SiteIllustrate>
+        <SiteUrl>https://www.fortiguard.com/webfilter?q=</SiteUrl>
+        <Regex>
+            <![CDATA[title">Category:(.*?)</h4>]]>
+        </Regex>
+        <ExampleInput type="domain">http://init.icloud-analysis.com/</ExampleInput>
+        <ExampleOutput>Malicious</ExampleOutput>
+        <TimeOut>15</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="SANS">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>IP</GetInfoType>
+        <SiteIllustrate>Give a ip,judge if it is a malicious websites</SiteIllustrate>
+        <SiteUrl>https://isc.sans.edu/ipinfo.html?ip=</SiteUrl>
+        <Regex>
+            <![CDATA[title">Category:(.*?)</h4>]]>
+        </Regex>
+        <ExampleInput type="ip">221.130.179.36</ExampleInput>
+        <ExampleOutput>CN</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Unavailable</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+    <Site name="TotalHash">
+        <Request_Type>GET</Request_Type>
+        <GetInfoType>HASH</GetInfoType>
+        <SiteIllustrate>Give a hash,judge if it is a malware</SiteIllustrate>
+        <SiteUrl>https://totalhash.cymru.com/analysis/?</SiteUrl>
+        <Regex>
+            <![CDATA[<th>AV</th>.*?<td>(.*?)</td>.*?<td>(.*?)</td>]]>
+        </Regex>
+        <ExampleInput type="hash">2be25b741214f07f2b111e88bcfac7cd5274f6e8</ExampleInput>
+        <ExampleOutput>Mcafee</ExampleOutput>
+        <TimeOut>10</TimeOut>
+        <SiteStatus>Available</SiteStatus>
+        <LastCheckDate>2018-08-21</LastCheckDate>
+    </Site>
+</SiteData>
